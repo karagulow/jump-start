@@ -2,6 +2,11 @@ import Card from './components/Card'
 import Header from "./components/Header";
 import Drawer from "./components/Drawer";
 
+const arr = [
+  { title: 'Мужские Кроссовки Nike Blazer Mid Suede', price: 12990, imageUrl: '/img/sneakers/1.jpg' },
+  { title: 'Мужские Кроссовки Nike Air Max 270', price: 15990, imageUrl: '/img/sneakers/2.jpg' },
+];
+
 function App() {
   return (
     <div className="wrapper clear">
@@ -16,7 +21,16 @@ function App() {
           </div>
         </div>
         <div className="d-flex">
-          <Card />
+          {
+            arr.map((obj) => (
+              <Card
+                title={obj.title}
+                price={obj.price}
+                imageUrl={obj.imageUrl}
+                onClick={() => alert(obj)}
+              />
+            ))
+          }
         </div>
       </div>
     </div>
