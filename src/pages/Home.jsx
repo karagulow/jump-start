@@ -33,7 +33,7 @@ function Home({
             <img
               onClick={() => setSearchValue('')}
               className="clear cu-p"
-              src="/img/btn-remove.svg"
+              src="img/btn-remove.svg"
               alt="Close"
             />
           )}
